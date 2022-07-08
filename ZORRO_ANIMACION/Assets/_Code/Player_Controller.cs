@@ -14,6 +14,7 @@ public class Player_Controller : MonoBehaviour
     private void Update()
     {
         CheckInput();
+        Debug.Log(_characterController.velocity.magnitude);
     }
 
     private void CheckInput()
@@ -24,13 +25,20 @@ public class Player_Controller : MonoBehaviour
             _playerAnimator.SetBool("Walking_right", true);
             _playerAnimator.SetBool("Idle", false);
         }
+        else
+        {
+            _playerAnimator.SetBool("Walking_right", false);
+            _playerAnimator.SetBool("Idle", true);
+        }
 
         if (Input.GetKey(KeyCode.A))
         {
             _characterController.Move(Vector3.left * _Speed * Time.deltaTime);
         }
 
-        _playerAnimator.SetBool("Idle",true);
-        _playerAnimator.SetBool("Walking_right", false);
+        if(_characterController.velocity.magnitude < 0.1f)
+        {
+            
+        }
     }
 }

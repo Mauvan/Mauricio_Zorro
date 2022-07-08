@@ -947,6 +947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441677271}
   - component: {fileID: 1441677270}
+  - component: {fileID: 1441677272}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -966,7 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126345ac878490d438fd19e46c4a2260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 6826606243190264253}
+  _characterController: {fileID: 1441677272}
   _playerAnimator: {fileID: 6826606243190264254}
   _Speed: 15
 --- !u!4 &1441677271
@@ -977,7 +978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441677269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -24.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -985,6 +986,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &1441677272
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441677269}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 30
+  m_Radius: 6.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 21, z: 0}
 --- !u!1001 &1719771438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3207,7 +3226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6826606243190264251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -23.43, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3379,8 +3398,8 @@ MonoBehaviour:
   - {fileID: 1655138461486238901}
   - {fileID: 2886677191908830760}
   m_Bounds:
-    m_Center: {x: -0.4360385, y: 0.24329948, z: 0}
-    m_Extent: {x: 3.1639614, y: 6.776699, z: 0}
+    m_Center: {x: -0.4360385, y: 0.24330044, z: 0}
+    m_Extent: {x: 3.1639614, y: 6.776698, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -3594,7 +3613,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5653393988944300504}
   - component: {fileID: 6826606243190264254}
-  - component: {fileID: 6826606243190264253}
   m_Layer: 2
   m_Name: Zorro
   m_TagString: Untagged
@@ -3602,24 +3620,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!143 &6826606243190264253
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6826606243190264251}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 30
-  m_Radius: 7
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 21, z: 0}
 --- !u!95 &6826606243190264254
 Animator:
   serializedVersion: 4
