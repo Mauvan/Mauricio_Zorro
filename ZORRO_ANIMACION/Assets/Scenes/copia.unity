@@ -1933,7 +1933,7 @@ GameObject:
   - component: {fileID: 1670789330022865035}
   - component: {fileID: 9658711}
   m_Layer: 0
-  m_Name: ZORRO_SOLDADO_IZQUIERDA
+  m_Name: Zorro_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
