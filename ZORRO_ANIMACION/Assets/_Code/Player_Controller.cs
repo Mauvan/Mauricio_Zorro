@@ -32,33 +32,42 @@ public class Player_Controller : MonoBehaviour
         {
             _IsWalkingRight = true;
             _rightCharacter.SetActive(true);
-            _leftCharacter.SetActive(false);
             _characterController.Move(Vector3.right * _Speed * Time.deltaTime);
             _rightAnimator.SetBool("Walking_right", true);
             _rightAnimator.SetBool("Idle_rigth", false);
+            _leftAnimator.SetBool("Walking_left", false);
+            _leftAnimator.SetBool("Idle_left", false);
+            _leftCharacter.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             _IsWalkingRight = false;
             _leftCharacter.SetActive(true);
-            _rightCharacter.SetActive(false);
             _characterController.Move(Vector3.left * _Speed * Time.deltaTime);
             _leftAnimator.SetBool("Walking_left", true);
             _leftAnimator.SetBool("Idle_left", false);
-        } else
+            _rightAnimator.SetBool("Walking_right", false);
+            _rightAnimator.SetBool("Idle_rigth", false);
+            _rightCharacter.SetActive(false);
+        } else if (Input.GetKey(null))
         {
             if(_IsWalkingRight ==true)
             {
+                _rightCharacter.SetActive(true);
                 _rightAnimator.SetBool("Idle_rigth", true);
                 _leftAnimator.SetBool("Idle_left", false);
                 _leftAnimator.SetBool("Walking_left", false);
                 _rightAnimator.SetBool("Walking_right", false);
-            }else if(_IsWalkingRight == false)
+                _leftCharacter.SetActive(false);
+            }
+            else if(_IsWalkingRight == false)
             {
+                _leftCharacter.SetActive(true);
                 _leftAnimator.SetBool("Idle_left", true);
                 _rightAnimator.SetBool("Idle_rigth", false);
                 _leftAnimator.SetBool("Walking_left", false);
                 _rightAnimator.SetBool("Walking_right", false);
+                _rightCharacter.SetActive(false);
             }
         }
     }
