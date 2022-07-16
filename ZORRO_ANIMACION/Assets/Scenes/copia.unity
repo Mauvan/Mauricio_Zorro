@@ -538,7 +538,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterController: {fileID: 1441677272}
-  _playerAnimator: {fileID: 6826606243190264254}
+  _leftCharacter: {fileID: 569652437960212712}
+  _leftAnimator: {fileID: 9658711}
+  _rightCharacter: {fileID: 6826606243190264251}
+  _rightAnimator: {fileID: 6826606243190264254}
   _Speed: 15
 --- !u!4 &1441677271
 Transform:
