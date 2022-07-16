@@ -49,7 +49,7 @@ public class Player_Controller : MonoBehaviour
             _rightAnimator.SetBool("Walking_right", false);
             _rightAnimator.SetBool("Idle_rigth", false);
             _rightCharacter.SetActive(false);
-        } else if (Input.GetKey(null))
+        } else if (Input.GetKey(KeyCode.None))
         {
             if(_IsWalkingRight ==true)
             {
