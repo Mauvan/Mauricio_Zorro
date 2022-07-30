@@ -133,7 +133,7 @@ Animator:
   m_GameObject: {fileID: 569652437960212712}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4409fab9e5c4cdd4699adc13a0104644, type: 2}
+  m_Controller: {fileID: 9100000, guid: dd610b4c6cef0fa4abfe0427650a21b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -561,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609402463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70, y: 6.2456007, z: 0}
+  m_LocalPosition: {x: 72.6, y: 6.2456007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -894,6 +894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441677271}
   - component: {fileID: 1441677270}
+  - component: {fileID: 1441677273}
   - component: {fileID: 1441677272}
   m_Layer: 0
   m_Name: Player
@@ -914,12 +915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126345ac878490d438fd19e46c4a2260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 1441677272}
   _leftCharacter: {fileID: 569652437960212712}
   _leftAnimator: {fileID: 9658711}
   _rightCharacter: {fileID: 6826606243190264251}
   _rightAnimator: {fileID: 6826606243190264254}
-  _Speed: 15
+  _Speed: 4.5
 --- !u!4 &1441677271
 Transform:
   m_ObjectHideFlags: 0
@@ -938,24 +938,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &1441677272
-CharacterController:
+--- !u!61 &1441677272
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441677269}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.090358734, y: -2.6279917}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Height: 30
-  m_Radius: 5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -2.25, z: 0}
+  m_Size: {x: 10.511627, y: 29.399511}
+  m_EdgeRadius: 0
+--- !u!50 &1441677273
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441677269}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 9.8
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1001 &1719771438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,6 +995,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: 1af452b7426717445889ec4b25ae0ab7, type: 3}
       propertyPath: m_Name
       value: ZORRO_SOLDADO_DERECHA
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 1af452b7426717445889ec4b25ae0ab7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1af452b7426717445889ec4b25ae0ab7, type: 3}
       propertyPath: m_RootOrder
@@ -1047,6 +1080,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: 1af452b7426717445889ec4b25ae0ab7, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 1af452b7426717445889ec4b25ae0ab7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8491674880726710961, guid: 1af452b7426717445889ec4b25ae0ab7, type: 3}
       propertyPath: m_Layer
@@ -1661,6 +1698,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: d5e2c3f66a4cf514aa4a1a05e59e01a7, type: 3}
       propertyPath: m_Name
       value: ZORRO_SOLDADO_IZQUIERDA (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: d5e2c3f66a4cf514aa4a1a05e59e01a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: d5e2c3f66a4cf514aa4a1a05e59e01a7, type: 3}
       propertyPath: m_RootOrder
@@ -2381,8 +2422,8 @@ MonoBehaviour:
   - {fileID: 7083740571702957587}
   - {fileID: 7101959355559258772}
   m_Bounds:
-    m_Center: {x: -1.1469936, y: 0.49114132, z: 0}
-    m_Extent: {x: 3.4769897, y: 6.808861, z: 0}
+    m_Center: {x: -1.1469908, y: 0.49114132, z: 0}
+    m_Extent: {x: 3.4769907, y: 6.808861, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2438,8 +2479,8 @@ MonoBehaviour:
   - {fileID: 6704101827164149140}
   - {fileID: 1686444216810044114}
   m_Bounds:
-    m_Center: {x: 2.9361305, y: -0.38044596, z: 0}
-    m_Extent: {x: 1.118948, y: 1.9315982, z: 0}
+    m_Center: {x: 2.9361284, y: -0.38044596, z: 0}
+    m_Extent: {x: 1.1189497, y: 1.9315982, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2954,7 +2995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569652437960212712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -23.9, z: 0}
+  m_LocalPosition: {x: -0.3, y: -22.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4643,7 +4684,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2531596775050162124}
   m_Bounds:
-    m_Center: {x: 3.3988442, y: -0.6425847, z: 0}
+    m_Center: {x: 3.398848, y: -0.6425847, z: 0}
     m_Extent: {x: 1.2161666, y: 0.75734115, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -4708,7 +4749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6826606243190264251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -23.43, z: 0}
+  m_LocalPosition: {x: -0.85, y: -23.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4765,8 +4806,8 @@ MonoBehaviour:
   - {fileID: 6656953340532236077}
   - {fileID: 3826336505833160080}
   m_Bounds:
-    m_Center: {x: 4.1167154, y: 3.3071234, z: 0}
-    m_Extent: {x: 3.8744981, y: 2.1186566, z: 0}
+    m_Center: {x: 4.1167173, y: 3.3071234, z: 0}
+    m_Extent: {x: 3.8745, y: 2.1186566, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -4891,8 +4932,8 @@ MonoBehaviour:
   - {fileID: 3826336505833160080}
   - {fileID: 6704101827164149140}
   m_Bounds:
-    m_Center: {x: 1.7400092, y: 1.2046301, z: 0}
-    m_Extent: {x: 1.457944, y: 3.558357, z: 0}
+    m_Center: {x: 1.7400073, y: 1.2046301, z: 0}
+    m_Extent: {x: 1.457946, y: 3.558357, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -5005,8 +5046,8 @@ MonoBehaviour:
   - {fileID: 1655138461486238901}
   - {fileID: 2886677191908830760}
   m_Bounds:
-    m_Center: {x: -0.4360385, y: 0.24329948, z: 0}
-    m_Extent: {x: 3.1639614, y: 6.776699, z: 0}
+    m_Center: {x: -0.4360392, y: 0.24329948, z: 0}
+    m_Extent: {x: 3.1639607, y: 6.776699, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -5643,7 +5684,7 @@ MonoBehaviour:
   - {fileID: 7774096370422688693}
   - {fileID: 3826336505833160080}
   m_Bounds:
-    m_Center: {x: 0.93671346, y: 0.03828764, z: 0}
+    m_Center: {x: 0.9367173, y: 0.03828764, z: 0}
     m_Extent: {x: 3.9281974, y: 5.5082855, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
